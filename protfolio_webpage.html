@@ -1,0 +1,1295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yasaswini | Portfolio</title>
+
+    <style>
+
+        /* BASIC SETTINGS */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7ff;
+            color: #333;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+            background: linear-gradient(90deg, #4b0082, #2575fc);
+
+            padding: 18px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+
+        /* HOME SECTION */
+
+        #home {
+            min-height: 90vh;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            padding: 60px 8%;
+
+            background: linear-gradient(135deg, #eee6ff, #d9edff);
+        }
+
+        .home-text {
+            max-width: 600px;
+        }
+
+        .home-text h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .home-text h1 span {
+            color: #5e17eb;
+        }
+
+        .home-text h3 {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .home-text p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+
+        /* BUTTON */
+
+        .btn {
+            display: inline-block;
+
+            background: #5e17eb;
+
+            color: white;
+
+            padding: 12px 25px;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #2575fc;
+        }
+
+
+        /* DECORATIVE PROFILE */
+
+        .profile-design {
+            width: 280px;
+            height: 280px;
+
+            border-radius: 50%;
+
+            background: linear-gradient(135deg, #5e17eb, #2575fc);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .profile-design div {
+            width: 220px;
+            height: 220px;
+
+            border-radius: 50%;
+
+            background: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 80px;
+        }
+
+
+        /* COMMON SECTIONS */
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .title {
+            text-align: center;
+
+            color: #5e17eb;
+
+            font-size: 32px;
+
+            margin-bottom: 40px;
+        }
+
+
+        /* ABOUT */
+
+        .about {
+            max-width: 1000px;
+
+            margin: auto;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+            text-align: center;
+        }
+
+        .about-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+
+        /* EDUCATION */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+
+            padding: 30px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #5e17eb;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+
+        /* SKILLS */
+
+        .skills {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .skill {
+            margin-bottom: 25px;
+        }
+
+        .skill-name {
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .bar {
+            height: 25px;
+
+            background: #ddd;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+        }
+
+        .html {
+            width: 90%;
+            height: 100%;
+            background: #e44d26;
+            color: white;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .css {
+            width: 80%;
+            height: 100%;
+            background: #264de4;
+            color: white;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .python {
+            width: 75%;
+            height: 100%;
+            background: #3776ab;
+            color: white;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .communication {
+            width: 85%;
+            height: 100%;
+            background: #5e17eb;
+            color: white;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+
+        /* HOBBIES */
+
+        .hobby-section {
+            background: #f0f3ff;
+        }
+
+
+        /* INTERESTS */
+
+        #interests {
+            background: linear-gradient(135deg, #dff3ff, #eee3ff);
+        }
+
+        .interest-list {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+        }
+
+        .interest {
+            background: white;
+
+            padding: 15px 25px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+            max-width: 700px;
+
+            margin: auto;
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .contact p {
+            margin: 15px;
+            font-size: 17px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background: #222;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+        }
+
+
+        /* MOBILE RESPONSIVE */
+
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+                font-size: 14px;
+            }
+
+            #home {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .home-text h1 {
+                font-size: 36px;
+            }
+
+            .profile-design {
+                width: 220px;
+                height: 220px;
+            }
+
+            .profile-design div {
+                width: 170px;
+                height: 170px;
+                font-size: 60px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 50px 5%;
+            }
+        
+/* INTEREST CARDS */
+
+#interests {
+    background: linear-gradient(135deg, #e0e7ff, #f3e8ff);
+}
+
+
+.interest-cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+}
+
+
+.interest-card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+
+}
+
+
+.interest-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+
+}
+
+
+.interest-card img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+}
+
+
+.interest-content {
+
+    padding: 25px;
+
+}
+
+
+.interest-content h3 {
+
+    color: #5e17eb;
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.interest-content p {
+
+    line-height: 1.7;
+
+    color: #555;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .interest-cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .interest-card img {
+
+        height: 200px;
+
+    }
+
+}
+/* Royal Contact Section */
+#contact {
+    background: linear-gradient(135deg, #1a0633, #3b0a63, #5e17eb);
+    color: white;
+    text-align: center;
+}
+
+#contact .title {
+    color: #ffd700;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    border-color: #ffd700;
+}
+
+.contact-card h3 {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    line-height: 1.7;
+}
+
+.contact-card a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-card a:hover {
+    color: #ffd700;
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 30px;
+    background: #ffd700;
+    color: #1a0633;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background: white;
+    color: #5e17eb;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Royal Colour Palette */
+
+body {
+    background: #f8f5ff;
+    color: #222;
+}
+
+nav {
+    background: #1a0633;
+}
+
+nav a {
+    color: white;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+.title {
+    color: #5e17eb;
+}
+
+button,
+.btn {
+    background: #5e17eb;
+    color: white;
+}
+
+button:hover,
+.btn:hover {
+    background: #ffd700;
+    color: #1a0633;
+}
+
+h3 {
+    color: #5e17eb;
+}
+/* INTEREST CARDS */
+
+#interests {
+    background: linear-gradient(135deg, #e0e7ff, #f3e8ff);
+}
+
+
+.interest-cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+}
+
+
+.interest-card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+
+}
+
+
+.interest-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+
+}
+
+
+.interest-card img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+}
+
+
+.interest-content {
+
+    padding: 25px;
+
+}
+
+
+.interest-content h3 {
+
+    color: #5e17eb;
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.interest-content p {
+
+    line-height: 1.7;
+
+    color: #555;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .interest-cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .interest-card img {
+
+        height: 200px;
+
+    }
+
+}
+
+
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <h2>My Portfolio</h2>
+
+        <div>
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#education">Education</a>
+
+            <a href="#skills">Skills</a>
+
+            <a href="#hobbies">Hobbies</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- HOME -->
+
+    <section id="home">
+
+        <div class="home-text">
+
+            <h1>
+                Hello, I'm <span>Yasaswini</span>
+            </h1>
+
+            <h3>
+                Student | Web Developer | Creative Learner
+            </h3>
+
+            <p>
+                Welcome to my personal portfolio.
+                I am a passionate student interested in
+                technology, programming and creative projects.
+            </p>
+
+            <a href="#about" class="btn">
+                Explore My Portfolio
+            </a>
+
+        </div>
+
+
+        <!-- DECORATIVE DESIGN -->
+
+        <div class="profile-design">
+
+            <div>
+                💻
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2 class="title">
+            About Me
+        </h2>
+
+        <div class="about">
+
+            <div class="about-icon">
+                🌐
+            </div>
+
+            <p>
+                <b>Hello! My name is Yasaswini</b>
+            </p>
+
+            <p>
+                I am a student interested in technology,
+                programming and web development.
+            </p>
+
+            <p>
+                I enjoy learning new technologies,
+                creating websites and working on
+                innovative projects.
+            </p>
+
+            <p>
+                <b>College:</b> sri Chaithnay
+            </p>
+
+            <p>
+                <b>Address:</b> Hyderabad, Telangana, India
+            </p>
+
+            <p>
+                <b>Profile:</b> Student & Aspiring Developer
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <h2 class="title">
+            My Education
+        </h2>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Universcity
+                    </h3>
+                    <h4>
+                    MRDU (Malla Reddy Deemed to be Universcity)
+                </h4>
+
+                <p>
+                    Currently pursuing my graduation
+                    and learning programming,
+                    web development and technology.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Intermediate
+                </h3>
+
+                <h4>
+                    Sri Chaitnay juniour collage
+                </h4>
+
+                <p>
+                    Completed my intermediate education
+                    and developed interest in technology.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🏫
+                </div>
+
+                <h3>
+                    School
+                </h3>
+
+                <h4>
+                    Sri Chaitnay high school
+                </h4>
+
+                <p>
+                    Completed my schooling and developed
+                    interest in learning and creativity.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2 class="title">
+            My Skills
+        </h2>
+
+
+        <div class="skills">
+
+
+            <div class="skill">
+
+                <div class="skill-name">
+                    HTML - 90%
+                </div>
+
+                <div class="bar">
+
+                    <div class="html">
+                        90%
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-name">
+                    CSS - 80%
+                </div>
+
+                <div class="bar">
+
+                    <div class="css">
+                        80%
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-name">
+                    Python - 75%
+                </div>
+
+                <div class="bar">
+
+                    <div class="python">
+                        75%
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-name">
+                    Communication - 85%
+                </div>
+
+                <div class="bar">
+
+                    <div class="communication">
+                        85%
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- HOBBIES -->
+
+    ```html
+<!-- INTERESTS -->
+
+<section id="interests">
+
+    <h2 class="title">My Interests</h2>
+
+    <div class="interest-cards">
+
+        <!-- Cooking -->
+
+        <div class="interest-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80"
+                alt="Cooking">
+
+            <div class="interest-content">
+
+                <h3>🍳 Cooking</h3>
+
+                <p>
+                    I enjoy cooking and trying different
+                    recipes. It is a creative activity that
+                    helps me relax and experiment with new ideas.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Painting -->
+
+        <div class="interest-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?auto=format&fit=crop&w=600&q=80"
+                alt="Painting">
+
+            <div class="interest-content">
+
+                <h3>🎨 Painting</h3>
+
+                <p>
+                    Painting is one of my creative interests.
+                    I enjoy working with colours and creating
+                    different designs and artwork.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Gaming -->
+
+        <div class="interest-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80"
+                alt="Gaming">
+
+            <div class="interest-content">
+
+                <h3>🎮 Gaming</h3>
+
+                <p>
+                    Gaming is an enjoyable activity for me.
+                    I like exploring different games and
+                    spending my free time playing them.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Vlogging -->
+
+        <div class="interest-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=600&q=80"
+                alt="Vlogging">
+
+            <div class="interest-content">
+
+                <h3>📹 Vlogging</h3>
+
+                <p>
+                    I am interested in vlogging and creating
+                    interesting content. I enjoy exploring
+                    creative ways to share ideas and experiences.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section> 
+
+
+//intreset cards
+    <section id="interests">
+
+        <h2 class="title">
+            My Interests
+        </h2>
+
+
+        <div class="interest-list">
+
+            <div class="interest">
+                🌐 Web Development
+            </div>
+
+            <div class="interest">
+                🤖 Technology
+            </div>
+
+            <div class="interest">
+                💡 Innovation
+            </div>
+
+            <div class="interest">
+                💻 Programming
+            </div>
+
+            <div class="interest">
+                🎨 Creative Design
+            </div>
+
+            <div class="interest">
+                📱 New Technologies
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2 class="title">
+            Contact Me
+        </h2>
+
+
+        <div class="contact">
+
+            <p>
+                📧 <b>Email:</b>
+                yasaswi1226@gmail.com
+            </p>
+
+            <p>
+                📱 <b>Phone:</b>
+                +91 9398886942
+            </p>
+
+            <p>
+                📍 <b>Address:</b>
+                Hyderabad, Telangana, India
+            </p>
+
+            <p>
+                💼 <b>Profile:</b>
+                Student & Aspiring Developer
+            </p>
+
+        </div>
+
+    
+    <section id="contact">
+    
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+            <h3>📧 Email</h3>
+            <p>
+                Feel free to contact me through email.
+            </p>
+            <a href="mailto:yourname@gmail.com">
+                yourname@gmail.com
+            </a>
+        </div>
+
+        <div class="contact-card">
+            <h3>📱 Phone</h3>
+            <p>
+                You can contact me through my phone number.
+            </p>
+            <a href="tel:+919876543210">
+                +91 9876543210
+            </a>
+        </div>
+
+        <div class="contact-card">
+            <h3>💼 LinkedIn</h3>
+            <p>
+                Visit my LinkedIn profile to know more about my education,
+                skills and professional activities.
+            </p>
+
+            <a href="https://www.linkedin.com/" target="_blank">
+                Visit My LinkedIn
+            </a>
+        </div>
+
+        <div class="contact-card">
+            <h3>💻 GitHub</h3>
+            <p>
+                You can visit my GitHub profile to see my projects,
+                Python programs and web development work.
+            </p>
+
+            <a href="https://github.com/" target="_blank">
+                Visit My GitHub
+            </a>
+        </div>
+
+    </div>
+
+    <a href="mailto:yourname@gmail.com" class="contact-button">
+        ✉️ Contact Me
+    </a>
+</section>
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>
+            Thank You for Visiting My Portfolio ❤️
+        </h3>
+
+        <p>
+            © 2026 Yasaswini | Personal Portfolio
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
+
